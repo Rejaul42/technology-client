@@ -2,7 +2,9 @@ import PropTypes from 'prop-types'; // ES6
 import { Link } from 'react-router-dom';
 
 const PopularBrands = ({ brand }) => {
+    // console.log(brand)
     const { brandName, image } = brand;
+    // console.log(brandName)
     return (
         <Link to={`/${brandName}`}>
             <div className="card bg-base-200 shadow-lg">

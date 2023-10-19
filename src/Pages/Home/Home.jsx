@@ -4,6 +4,7 @@ import PopularBrands from "../PopularBrands/PopularBrands";
 
 const Home = () => {
     const brands = useLoaderData()
+    console.log(brands)
     return (
         <div>
             <Banner></Banner>
