@@ -1,39 +1,39 @@
 [
     {
       "id": 1,
-      "brandName": "Brand A",
+      "brandName": "Apple",
       "brandCategory": "Electronics",
-      "image": "https://example.com/images/brandA.jpg"
+      "image": "https://i.ibb.co/qjGtrtZ/tablet-smartphones-watches.jpg"
     },
     {
       "id": 2,
-      "brandName": "Brand B",
+      "brandName": "Google",
       "brandCategory": "Clothing",
-      "image": "https://example.com/images/brandB.jpg"
+      "image": "https://i.ibb.co/DMSCgjP/google.jpg"
     },
     {
       "id": 3,
-      "brandName": "Brand C",
+      "brandName": "Samsung",
       "brandCategory": "Food",
-      "image": "https://example.com/images/brandC.jpg"
+      "image": "https://i.ibb.co/DwRWSNp/kisspng-logo-samsung-group-trademark-samsung-electronics-f-samsung-logo-png-hd-samsung-logo-png-imag.jpg"
     },
     {
       "id": 4,
-      "brandName": "Brand D",
+      "brandName": "Microsoft",
       "brandCategory": "Automotive",
-      "image": "https://example.com/images/brandD.jpg"
+      "image": "https://i.ibb.co/nD8S7FF/1000-F-293796187-2n-G5j-SFbkysw-NN7g-G3-Ik-QSYhuy-BId-K1-W.jpg"
     },
     {
       "id": 5,
-      "brandName": "Brand E",
+      "brandName": "Sony",
       "brandCategory": "Beauty",
-      "image": "https://example.com/images/brandE.jpg"
+      "image": "https://i.ibb.co/7Jb8dj3/photo-1662948261149-3f0a0ab0181b.jpg"
     },
     {
       "id": 6,
-      "brandName": "Brand F",
+      "brandName": "Intel",
       "brandCategory": "Furniture",
-      "image": "https://example.com/images/brandF.jpg"
+      "image": "https://i.ibb.co/pZ268j3/673-intel.jpg"
     }
   ]
   
