@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "brandName": "Brand A",
+      "brandCategory": "Electronics",
+      "image": "https://example.com/images/brandA.jpg"
+    },
+    {
+      "id": 2,
+      "brandName": "Brand B",
+      "brandCategory": "Clothing",
+      "image": "https://example.com/images/brandB.jpg"
+    },
+    {
+      "id": 3,
+      "brandName": "Brand C",
+      "brandCategory": "Food",
+      "image": "https://example.com/images/brandC.jpg"
+    },
+    {
+      "id": 4,
+      "brandName": "Brand D",
+      "brandCategory": "Automotive",
+      "image": "https://example.com/images/brandD.jpg"
+    },
+    {
+      "id": 5,
+      "brandName": "Brand E",
+      "brandCategory": "Beauty",
+      "image": "https://example.com/images/brandE.jpg"
+    },
+    {
+      "id": 6,
+      "brandName": "Brand F",
+      "brandCategory": "Furniture",
+      "image": "https://example.com/images/brandF.jpg"
+    }
+  ]
+  
