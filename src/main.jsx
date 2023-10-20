@@ -15,6 +15,7 @@ import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import AuthProvider from './Provider/AuthProvider';
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
+import JoinUs from './Pages/JoinUs/JoinUs';
 // import PopularBrands from './Pages/PopularBrands/PopularBrands';
 
 const router = createBrowserRouter([
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: '/addProduct',
         element: <AddProduct></AddProduct>,
+      },
+      {
+        path: "/joinUs",
+        element: <JoinUs></JoinUs>
       },
       {
         path: '/myCart',

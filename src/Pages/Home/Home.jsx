@@ -1,5 +1,6 @@
 // import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
+import JoinUs from "../JoinUs/JoinUs";
 import PopularBrands from "../PopularBrands/PopularBrands";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <PopularBrands></PopularBrands>
+            <JoinUs></JoinUs>
         </div>
     );
 };
