@@ -3,19 +3,26 @@
       "id": 1,
       "brandName": "Apple",
       "brandCategory": "Electronics",
-      "image": "https://i.ibb.co/qjGtrtZ/tablet-smartphones-watches.jpg"
+      "image": "https://i.ibb.co/qjGtrtZ/tablet-smartphones-watches.jpg",
+      "image1": "https://i.ibb.co/2KRVJzW/download-1.jpg",
+      "image2": "https://i.ibb.co/zS5WjX5/download-2.jpg",
+      "image3": "https://i.ibb.co/cL0j2SR/download-3.jpg"
     },
     {
       "id": 2,
       "brandName": "Google",
       "brandCategory": "Clothing",
-      "image": "https://i.ibb.co/DMSCgjP/google.jpg"
+      "image": "https://i.ibb.co/DMSCgjP/google.jpg",
+      "image1": "https://i.ibb.co/y4hzgjY/download.png",
+      "image2": "https://i.ibb.co/5kPc8cf/download-1.png",
+      "image3": "https://i.ibb.co/4fb90jw/download-2.png"
     },
     {
       "id": 3,
       "brandName": "Samsung",
       "brandCategory": "Food",
-      "image": "https://i.ibb.co/DwRWSNp/kisspng-logo-samsung-group-trademark-samsung-electronics-f-samsung-logo-png-hd-samsung-logo-png-imag.jpg"
+      "image": "https://i.ibb.co/DwRWSNp/kisspng-logo-samsung-group-trademark-samsung-electronics-f-samsung-logo-png-hd-samsung-logo-png-imag.jpg",
+      "image1": "https://i.ibb.co/y4hzgjY/download.png"
     },
     {
       "id": 4,

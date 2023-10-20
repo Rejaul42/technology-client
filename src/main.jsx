@@ -9,6 +9,7 @@ import Root from './Pages/Root/Root';
 import Home from './Pages/Home/Home';
 import AddProduct from './Pages/AddProduct/AddProduct';
 import MyCart from './Pages/MyCart/MyCart';
+import PopularBrands from './Pages/PopularBrands/PopularBrands';
 import Brands from './Pages/Brands/Brands';
 // import PopularBrands from './Pages/PopularBrands/PopularBrands';
 
@@ -20,11 +21,15 @@ const router = createBrowserRouter([
       {
         path : '/',
         element: <Home></Home>,
-        loader: () => fetch('brand.json')
       },
       {
-        path: '/:brandName',
-        element: <Brands></Brands>
+        path: '/popular_brands',
+        element: <PopularBrands></PopularBrands>
+      },
+      {
+        path:'/:brandName',
+        element:<Brands></Brands>,
+        // loader : () => fetch('/brand.json')
       },
       {
         path : '/addProduct',

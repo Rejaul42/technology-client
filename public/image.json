@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "brandName": "Apple",
+        "brandCategory": "Electronics",
+        "image": "https://i.ibb.co/qjGtrtZ/tablet-smartphones-watches.jpg",
+        "image1": "https://i.ibb.co/2KRVJzW/download-1.jpg",
+        "image2": "https://i.ibb.co/zS5WjX5/download-2.jpg",
+        "image3": "https://i.ibb.co/cL0j2SR/download-3.jpg"
+      },
+      {
+        "id": 2,
+        "brandName": "Google",
+        "brandCategory": "Clothing",
+        "image": "https://i.ibb.co/DMSCgjP/google.jpg",
+        "image1": "https://i.ibb.co/y4hzgjY/download.png",
+        "image2": "https://i.ibb.co/5kPc8cf/download-1.png",
+        "image3": "https://i.ibb.co/4fb90jw/download-2.png"
+      },
+      {
+        "id": 2,
+        "brandName": "Samsung",
+        "brandCategory": "Clothing",
+        "image": "https://i.ibb.co/DMSCgjP/google.jpg",
+        "image1": "https://i.ibb.co/khFjMHt/download-4.jpg",
+        "image2": "https://i.ibb.co/M7k9xNT/download-3.png",
+        "image3": "https://i.ibb.co/VV8tfjb/download-76.png"
+      },
+      {
+        "id": 2,
+        "brandName": "Microsoft",
+        "brandCategory": "Clothing",
+        "image": "https://i.ibb.co/DMSCgjP/google.jpg",
+        "image1": "https://i.ibb.co/bK502N9/download-5.jpg",
+        "image2": "https://i.ibb.co/DGGcx3w/download-6.jpg",
+        "image3": "https://i.ibb.co/h8mD4rK/download-4.png"
+      },
+      {
+        "id": 2,
+        "brandName": "Sony",
+        "brandCategory": "Clothing",
+        "image": "https://i.ibb.co/DMSCgjP/google.jpg",
+        "image1": "https://i.ibb.co/rMJQL2W/download-7.jpg",
+        "image2": "https://i.ibb.co/JsxBk1T/download-8.jpg",
+        "image3": "https://i.ibb.co/HdgYN1Q/download-9.jpg"
+      },
+      {
+        "id": 2,
+        "brandName": "Intel",
+        "brandCategory": "Clothing",
+        "image": "https://i.ibb.co/DMSCgjP/google.jpg",
+        "image1": "https://i.ibb.co/d4tgdhR/download-10.jpg",
+        "image2": "https://i.ibb.co/1Zw7xyB/images.jpg",
+        "image3": "https://i.ibb.co/9YXjfMT/images-1.jpg"
+      }
+]

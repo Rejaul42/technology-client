@@ -1,26 +1,27 @@
-import PropTypes from 'prop-types'; // ES6
-import { Link } from 'react-router-dom';
 
-const PopularBrands = ({ brand }) => {
-    // console.log(brand)
-    const { brandName, image } = brand;
-    // console.log(brandName)
+import { useEffect, useState } from 'react';
+import PopularBrand from './PopularBrand';
+
+const PopularBrands = () => {
+    const [brands, setBrands] = useState([])
+    // const brands = useLoaderData()
+
+    useEffect(() =>{
+        fetch('brand.json')
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data)
+            setBrands(data)
+        })
+    },[])
     return (
-        <Link to={`/${brandName}`}>
-            <div className="card bg-base-200 shadow-lg">
-                <figure className="px-4 pt-4">
-                    <img src={image} alt="Shoes" className="rounded-xl h-60 w-96" />
-                </figure>
-                <div className="card-body items-center text-center">
-                    <h2 className="card-title">{brandName}</h2>
-                </div>
-            </div>
-        </Link>
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-6">
+            {
+                brands.map(brand => <PopularBrand key={brand.id} brand={brand}></PopularBrand>)
+            }
+        </div>
     );
 };
 
-PopularBrands.propTypes = {
-    brand: PropTypes.object,
-}
 
 export default PopularBrands;
