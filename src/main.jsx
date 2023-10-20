@@ -11,15 +11,20 @@ import AddProduct from './Pages/AddProduct/AddProduct';
 import MyCart from './Pages/MyCart/MyCart';
 import PopularBrands from './Pages/PopularBrands/PopularBrands';
 import Brands from './Pages/Brands/Brands';
+import ErrorPage from './Pages/ErrorPage/ErrorPage';
+import AuthProvider from './Provider/AuthProvider';
+import Register from './Pages/Register/Register';
+import Login from './Pages/Login/Login';
 // import PopularBrands from './Pages/PopularBrands/PopularBrands';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children : [
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
       {
-        path : '/',
+        path: '/',
         element: <Home></Home>,
       },
       {
@@ -27,17 +32,24 @@ const router = createBrowserRouter([
         element: <PopularBrands></PopularBrands>
       },
       {
-        path:'/:brandName',
-        element:<Brands></Brands>,
-        // loader : () => fetch('/brand.json')
+        path: '/:brandName',
+        element: <Brands></Brands>,
       },
       {
-        path : '/addProduct',
+        path: '/addProduct',
         element: <AddProduct></AddProduct>,
       },
       {
         path: '/myCart',
         element: <MyCart></MyCart>
+      },
+      {
+        path: '/register',
+        element: <Register></Register>
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
       }
     ]
   },
@@ -45,6 +57,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
