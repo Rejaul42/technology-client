@@ -25,7 +25,7 @@ const Cart = ({product}) => {
                        if(data.deletedCount >0){
                         Swal.fire(
                             'Deleted!',
-                            'Your coffee has been deleted.',
+                            'Your Product has been deleted.',
                             'success'
                         )
                         // const remeining = coffees.filter(cof => cof._id !==_id)

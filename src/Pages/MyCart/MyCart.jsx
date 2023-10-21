@@ -4,10 +4,10 @@ import { authContest } from "../../Provider/AuthProvider";
 import Cart from "./Cart";
 
 const MyCart = () => {
-    const loadedData = useLoaderData()
     const { user } = useContext(authContest);
     const email = user.email;
     const [userData, setUserData] = useState()
+    const loadedData = useLoaderData()
 
     useEffect(() => {
         const userCart = loadedData.filter(item => item.email == email)
@@ -17,7 +17,7 @@ const MyCart = () => {
     return (
         <div>
             {
-                userData.length <0 ? <div>
+                userData?.length <0 ? <div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 bg-base-100">
                         {
                             userData?.map(product => <Cart key={product._id} product={product}></Cart>)
