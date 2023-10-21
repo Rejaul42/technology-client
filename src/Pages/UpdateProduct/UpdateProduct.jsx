@@ -1,7 +1,12 @@
+import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
-const AddProduct = () => {
-    const handelAddProduct = e => {
+const UpdateProduct = () => {
+    // const {id} = useParams()
+    const loadedData = useLoaderData()
+    const { _id, name, brandName, type, rating, price, photo } = loadedData
+
+    const handelUpdateProduct = e => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
@@ -9,9 +14,8 @@ const AddProduct = () => {
         const type = form.type.value;
         const rating = form.rating.value;
         const price = form.price.value;
-        const description = form.description.value;
         const photo = form.photo.value;
-        console.log(name, brandName, type, rating, price, description, photo)
+        console.log(name, brandName, type, rating, price, photo)
 
         const data = {
             name,
@@ -19,12 +23,11 @@ const AddProduct = () => {
             type,
             rating,
             price,
-            description,
             photo
         }
-        fetch('http://localhost:5000/product', {
-            method: 'POST',
-            headers :{
+        fetch(`http://localhost:5000/product/${_id}`, {
+            method: 'PUT',
+            headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(data)
@@ -32,12 +35,12 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if(data.insertedId){
+                if (data.modifiedCount > 0) {
                     Swal.fire(
-                        'Successfully added an item!',
+                        'Successfully Updated an item!',
                         'You clicked the button!',
                         'success'
-                      )
+                    )
                 }
                 form.reset()
             })
@@ -45,26 +48,26 @@ const AddProduct = () => {
     }
     return (
         <div className="bg-base-100 shadow-lg p-8">
-            <form onSubmit={handelAddProduct}>
+            <form onSubmit={handelUpdateProduct}>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" placeholder="Name" name="name" className="input input-bordered" />
+                            <input type="text" placeholder="Name" name="name" defaultValue={name} className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Brand name</span>
                             </label>
-                            <input type="text" placeholder="Brand name" name="brandName" className="input input-bordered" />
+                            <input type="text" defaultValue={brandName} placeholder="Brand name" name="brandName" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Type</span>
                             </label>
-                            <input type="text" placeholder="Type" name="type" className="input input-bordered" />
+                            <input type="text" defaultValue={type} placeholder="Type" name="type" className="input input-bordered" />
                         </div>
                     </div>
                     <div>
@@ -72,28 +75,22 @@ const AddProduct = () => {
                             <label className="label">
                                 <span className="label-text">Rating</span>
                             </label>
-                            <input type="text" placeholder="Rating" name="rating" className="input input-bordered" />
+                            <input type="text" defaultValue={rating} placeholder="Rating" name="rating" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Price</span>
                             </label>
-                            <input type="text" placeholder="Price" name="price" className="input input-bordered" />
+                            <input type="text" defaultValue={price} placeholder="Price" name="price" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Short description</span>
+                                <span className="label-text">Photo</span>
                             </label>
-                            <input type="text" placeholder="Short description" name="description" className="input input-bordered" />
+                            <input type="text" defaultValue={photo} placeholder="photo url" name="photo" className="input input-bordered" />
                         </div>
                     </div>
 
-                </div>
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text">Photo URL</span>
-                    </label>
-                    <input type="text" placeholder="Photo URL" name="photo" className="input input-bordered" />
                 </div>
                 <div className="text-center mt-4">
                     <input className=" w-2/4 bg-green-600 text-white py-3 rounded-lg font-medium" type="submit" value="Add Item" />
@@ -103,4 +100,4 @@ const AddProduct = () => {
     );
 };
 
-export default AddProduct;
+export default UpdateProduct;

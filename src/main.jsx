@@ -16,6 +16,7 @@ import AuthProvider from './Provider/AuthProvider';
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
 import JoinUs from './Pages/JoinUs/JoinUs';
+import UpdateProduct from './Pages/UpdateProduct/UpdateProduct';
 // import PopularBrands from './Pages/PopularBrands/PopularBrands';
 
 const router = createBrowserRouter([
@@ -35,10 +36,16 @@ const router = createBrowserRouter([
       {
         path: '/:brandName',
         element: <Brands></Brands>,
+        loader: () => fetch('http://localhost:5000/product')
       },
       {
         path: '/addProduct',
         element: <AddProduct></AddProduct>,
+      },
+      {
+        path: '/:brandName/:id',
+        element: <UpdateProduct></UpdateProduct>,
+        loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
       },
       {
         path: "/joinUs",

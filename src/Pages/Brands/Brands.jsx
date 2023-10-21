@@ -1,26 +1,37 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
+import SingleBrand from "../SingleBrand/SingleBrand";
 
 const Brands = () => {
     // const brands = useLoaderData()
     const [brands, setBrands] = useState([])
     const { brandName } = useParams()
     const [matchBrand, setMatchBrand] = useState([])
-
+    const LoadedBrands = useLoaderData()
+    const [findBrands, setFindBrands] = useState([])
 
     useEffect(() => {
         fetch('/image.json')
             .then(res => res.json())
             .then(data => setBrands(data))
     }, [])
-    console.log(brands)
+    // console.log(brands)
 
     useEffect(() => {
         const findBrand = brands?.find(brand => brand.brandName == brandName);
         setMatchBrand(findBrand)
     }, [brands, brandName])
-    console.log(matchBrand)
+    // console.log(matchBrand)
     // const {image1, image2, image3} = matchBrand;
+
+    // Brands sections  
+
+    useEffect(() => {
+        const brandCard = LoadedBrands.filter(brand => brand.brandName == brandName)
+        setFindBrands(brandCard)
+    }, [LoadedBrands, brandName])
+    console.log(findBrands)
+
     return (
         <div className="mt-8 bg-base-100">
             <div className="carousel w-full  h-[400px]">
@@ -52,6 +63,11 @@ const Brands = () => {
                         <a href="#slide1" className="btn btn-circle">❯</a>
                     </div>
                 </div>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-center bg-base-100 mt-8">
+                {
+                    findBrands.map(singleBrand => <SingleBrand key={singleBrand.id} singleBrand={singleBrand}></SingleBrand>)
+                }
             </div>
         </div>
     );

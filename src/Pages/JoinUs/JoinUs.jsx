@@ -7,16 +7,16 @@ const JoinUs = () => {
                 <div className="flex justify-between">
                     <div>
                         <p>Name</p>
-                        <input className="py-3 px-2 rounded-md bg-base-100 input input-bordered w-96 max-w-xs " placeholder="Name" type="text" />
+                        <input className="py-3 px-2 text-black rounded-md bg-base-100 input input-bordered w-96 max-w-xs " placeholder="Name" type="text" />
                     </div>
                     <div>
                         <p>Email</p>
-                        <input className="py-3 px-2 rounded-md bg-base-100 input input-bordered w-96 max-w-xs" placeholder="Email" type="text" />
+                        <input className="py-3 px-2 text-black rounded-md bg-base-100 input input-bordered w-96 max-w-xs" placeholder="Email" type="text" />
                     </div>
                 </div>
                 <div className="mt-4">
                     <p>Comment</p>
-                    <textarea placeholder="Comment" className="textarea textarea-bordered textarea-lg w-full" ></textarea>
+                    <textarea placeholder="Comment" className="textarea text-black textarea-bordered textarea-lg w-full" ></textarea>
                 </div>
                 <div className="text-end mt-4">
                 <button className="btn btn-secondary">Submit</button>
