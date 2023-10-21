@@ -1,7 +1,40 @@
 import PropTypes from 'prop-types'; // ES6
+import Swal from 'sweetalert2';
 
 const Cart = ({product}) => {
-    const { name, brandName, type, rating, price, description, photo} = product;
+    const { _id, name, brandName, type, rating, price, description, photo} = product;
+
+    const handleDelete = (_id) =>{
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                
+                fetch(`http://localhost:5000/product/${_id}`,{
+                    method: "DELETE"
+                })
+                    .then(res => res.json())
+                    .then(data =>{
+                        console.log(data)
+                       if(data.deletedCount >0){
+                        Swal.fire(
+                            'Deleted!',
+                            'Your coffee has been deleted.',
+                            'success'
+                        )
+                        // const remeining = coffees.filter(cof => cof._id !==_id)
+                        // setCoffees(remeining)
+                       }
+                    })
+            }
+        })
+    }
     return (
         <div className=" mt-8">
             <div className="card bg-base-100 shadow-xl">
@@ -26,7 +59,7 @@ const Cart = ({product}) => {
                     <p><span className="font-semibold">Description:</span> {description}</p>
                     <div className="card-actions justify-end text-white">
                         <div className="badge btn bg-green-600 badge-outline">
-                            <button >Add Cart</button></div>
+                            <button onClick={() => handleDelete(_id)}>Delete Product</button></div>
                     </div>
                 </div>
             </div>
