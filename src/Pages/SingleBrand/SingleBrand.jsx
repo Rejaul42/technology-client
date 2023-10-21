@@ -23,7 +23,7 @@ const SingleBrand = ({ singleBrand }) => {
                         <p>Brand: {brandName}</p>
                     </div>
                     <div className="card-actions justify-end text-white">
-                        <div className="badge btn bg-green-600 badge-outline">Details</div>
+                        <div className="badge btn bg-green-600 badge-outline"><Link to={`/details/${_id}`}>Details</Link></div>
                         <div className="badge btn bg-green-600 badge-outline"><Link to={`/${brandName}/${_id}`}>Update</Link></div>
                     </div>
                 </div>

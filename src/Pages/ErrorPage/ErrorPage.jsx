@@ -6,6 +6,7 @@ const ErrorPage = () => {
         <div>
             <div className="h-screen flex flex-col justify-center items-center ">
                 <div id="error-page" className="text-center flex  flex-col gap-3 text-4xl">
+                    <img src="https://i.ibb.co/bmxgGT2/download-5.png" alt="" />
                     <h1>Oops!</h1>
                     <p>Sorry, an unexpected error has occurred.</p>
                     <p>

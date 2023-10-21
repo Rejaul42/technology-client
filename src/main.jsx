@@ -17,6 +17,8 @@ import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
 import JoinUs from './Pages/JoinUs/JoinUs';
 import UpdateProduct from './Pages/UpdateProduct/UpdateProduct';
+import Details from './Pages/Details/Details';
+import PriveteRoute from './Provider/Route/PriveteRoute';
 // import PopularBrands from './Pages/PopularBrands/PopularBrands';
 
 const router = createBrowserRouter([
@@ -40,11 +42,16 @@ const router = createBrowserRouter([
       },
       {
         path: '/addProduct',
-        element: <AddProduct></AddProduct>,
+        element: <PriveteRoute><AddProduct></AddProduct></PriveteRoute>,
       },
       {
         path: '/:brandName/:id',
-        element: <UpdateProduct></UpdateProduct>,
+        element: <PriveteRoute><UpdateProduct></UpdateProduct></PriveteRoute>,
+        loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+      },
+      {
+        path: '/details/:id',
+        element: <PriveteRoute><Details></Details></PriveteRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
       },
       {
@@ -53,7 +60,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/myCart',
-        element: <MyCart></MyCart>
+        element: <PriveteRoute><MyCart></MyCart></PriveteRoute>,
+        loader: () => fetch("http://localhost:5000/cart"),
       },
       {
         path: '/register',
