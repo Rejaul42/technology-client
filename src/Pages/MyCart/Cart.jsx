@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'; // ES6
 import Swal from 'sweetalert2';
 
-const Cart = ({product}) => {
-    const { _id, name, brandName, type, rating, price, description, photo} = product;
+const Cart = ({ product, userData, setUserData }) => {
+    const { _id, name, brandName, type, rating, price, description, photo } = product;
 
-    const handleDelete = (_id) =>{
+    const handleDelete = (_id) => {
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -15,22 +15,22 @@ const Cart = ({product}) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                
-                fetch(`http://localhost:5000/product/${_id}`,{
+
+                fetch(`https://technology-and-electronics-server-k60o80dib-rejas-projects.vercel.app/product/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
-                    .then(data =>{
+                    .then(data => {
                         console.log(data)
-                       if(data.deletedCount >0){
-                        Swal.fire(
-                            'Deleted!',
-                            'Your Product has been deleted.',
-                            'success'
-                        )
-                        // const remeining = coffees.filter(cof => cof._id !==_id)
-                        // setCoffees(remeining)
-                       }
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Product has been deleted.',
+                                'success'
+                            )
+                            const remeining = userData.filter(item => item._id !==_id)
+                            setUserData(remeining)
+                        }
                     })
             }
         })
@@ -54,7 +54,7 @@ const Cart = ({product}) => {
                     <div className='text-xl font-semibold text-green-600'>
                         <p>Type: {type}</p>
                         <p>Brand: {brandName}</p>
-                        
+
                     </div>
                     <p><span className="font-semibold">Description:</span> {description}</p>
                     <div className="card-actions justify-end text-white">
@@ -69,5 +69,8 @@ const Cart = ({product}) => {
 
 Cart.propTypes = {
     product: PropTypes.object,
+    userData: PropTypes.array,
+    setUserData: PropTypes.func
+
 }
 export default Cart;

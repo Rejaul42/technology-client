@@ -8,6 +8,7 @@ const MyCart = () => {
     const email = user.email;
     const [userData, setUserData] = useState()
     const loadedData = useLoaderData()
+    console.log(loadedData)
 
     useEffect(() => {
         const userCart = loadedData.filter(item => item.email == email)
@@ -17,10 +18,15 @@ const MyCart = () => {
     return (
         <div>
             {
-                userData?.length <0 ? <div>
+                userData ? <div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 bg-base-100">
                         {
-                            userData?.map(product => <Cart key={product._id} product={product}></Cart>)
+                            userData?.map(product => <Cart
+                                 key={product._id} 
+                                 product={product}
+                                 userData={userData}
+                                 setUserData={setUserData}
+                                 ></Cart>)
                         }
                     </div>
                 </div> : <p>No Data Fount</p>

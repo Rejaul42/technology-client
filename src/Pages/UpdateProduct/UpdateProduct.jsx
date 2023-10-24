@@ -25,7 +25,7 @@ const UpdateProduct = () => {
             price,
             photo
         }
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://technology-and-electronics-server-k60o80dib-rejas-projects.vercel.app/product/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -93,7 +93,7 @@ const UpdateProduct = () => {
 
                 </div>
                 <div className="text-center mt-4">
-                    <input className=" w-2/4 bg-green-600 text-white py-3 rounded-lg font-medium" type="submit" value="Add Item" />
+                    <button className=" w-2/4 bg-green-600 text-white py-3 rounded-lg font-medium"><input  type="submit" value="Add Item" /></button>
                 </div>
             </form>
         </div>

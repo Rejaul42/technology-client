@@ -22,7 +22,7 @@ const AddProduct = () => {
             description,
             photo
         }
-        fetch('http://localhost:5000/product', {
+        fetch('https://technology-and-electronics-server-k60o80dib-rejas-projects.vercel.app/product', {
             method: 'POST',
             headers :{
                 'content-type': 'application/json'

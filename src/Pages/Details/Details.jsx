@@ -16,7 +16,7 @@ const Details = () => {
 
     const handleAddCart=(data) =>{
         
-        fetch("http://localhost:5000/cart", {
+        fetch("https://technology-and-electronics-server-k60o80dib-rejas-projects.vercel.app/cart", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

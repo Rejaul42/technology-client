@@ -1,8 +1,14 @@
-# React + Vite
+** About my Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+* My project based on Technology and Electronic product base, here you can find any popular brand product.
 
-Currently, two official plugins are available:
+* Here have Multiple brand section.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* You can chose your favorite brand and buy your wanted product.
+
+* Here you can add any product and delete the product.
+
+* You can added your preferred product on the cart. 
+
+
+data link: https://technology-and-electronics-server-k60o80dib-rejas-projects.vercel.app/product

@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       {
         path: '/:brandName',
         element: <Brands></Brands>,
-        loader: () => fetch('http://localhost:5000/product')
+        loader: () => fetch('https://technology-and-electronics-server-k60o80dib-rejas-projects.vercel.app/product')
       },
       {
         path: '/addProduct',
@@ -47,12 +47,12 @@ const router = createBrowserRouter([
       {
         path: '/:brandName/:id',
         element: <PriveteRoute><UpdateProduct></UpdateProduct></PriveteRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({ params }) => fetch(`https://technology-and-electronics-server-k60o80dib-rejas-projects.vercel.app/product/${params.id}`)
       },
       {
         path: '/details/:id',
         element: <PriveteRoute><Details></Details></PriveteRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/product/${params.id}`)
+        loader: ({ params }) => fetch(`https://technology-and-electronics-server-k60o80dib-rejas-projects.vercel.app/product/${params.id}`)
       },
       {
         path: "/joinUs",
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
       {
         path: '/myCart',
         element: <PriveteRoute><MyCart></MyCart></PriveteRoute>,
-        loader: () => fetch("http://localhost:5000/cart"),
+        loader: () => fetch("https://technology-and-electronics-server-k60o80dib-rejas-projects.vercel.app/cart"),
       },
       {
         path: '/register',
