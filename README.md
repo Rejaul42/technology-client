@@ -11,6 +11,5 @@
 * You can added your preferred product on the cart. 
 
 
-data link: https://technology-and-electronics-server-ruddy.vercel.app/product
+Project live Link: https://6538f3235bc2d905fdc601d9--neon-sunburst-a3ba32.netlify.app/
 
-https://technology-and-electronics-server-ruddy.vercel.app/product
