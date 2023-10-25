@@ -8,15 +8,15 @@ const Details = () => {
     const {user} = useContext(authContest)
     console.log(user.email)
     const email = user.email;
-    const {_id, name, brandName, type, rating, price, description, photo} = loadedProduct;
+    const { name, brandName, type, rating, price, description, photo} = loadedProduct;
 
     const data ={
-        _id, name, brandName, type, rating, price, description, photo, email
+         name, brandName, type, rating, price, description, photo, email
     }
 
     const handleAddCart=(data) =>{
         
-        fetch("https://technology-and-electronics-server-k60o80dib-rejas-projects.vercel.app/cart", {
+        fetch("https://technology-and-electronics-server-ruddy.vercel.app/cart", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

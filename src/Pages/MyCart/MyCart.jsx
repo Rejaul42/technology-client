@@ -11,7 +11,7 @@ const MyCart = () => {
     console.log(loadedData)
 
     useEffect(() => {
-        const userCart = loadedData.filter(item => item.email == email)
+        const userCart = loadedData?.filter(item => item.email == email)
         setUserData(userCart)
     }, [loadedData, email])
     console.log(userData)

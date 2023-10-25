@@ -11,4 +11,6 @@
 * You can added your preferred product on the cart. 
 
 
-data link: https://technology-and-electronics-server-k60o80dib-rejas-projects.vercel.app/product
+data link: https://technology-and-electronics-server-ruddy.vercel.app/product
+
+https://technology-and-electronics-server-ruddy.vercel.app/product

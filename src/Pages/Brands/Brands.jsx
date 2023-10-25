@@ -4,11 +4,12 @@ import SingleBrand from "../SingleBrand/SingleBrand";
 
 const Brands = () => {
     // const brands = useLoaderData()
+    const LoadedBrands = useLoaderData()
     const [brands, setBrands] = useState([])
     const { brandName } = useParams()
     const [matchBrand, setMatchBrand] = useState([])
-    const LoadedBrands = useLoaderData()
     const [findBrands, setFindBrands] = useState([])
+    console.log(LoadedBrands)
 
     useEffect(() => {
         fetch('/image.json')
@@ -18,7 +19,7 @@ const Brands = () => {
     // console.log(brands)
 
     useEffect(() => {
-        const findBrand = brands?.find(brand => brand.brandName == brandName);
+        const findBrand = brands?.find(brand => brand?.brandName == brandName);
         setMatchBrand(findBrand)
     }, [brands, brandName])
     // console.log(matchBrand)
@@ -27,7 +28,7 @@ const Brands = () => {
     // Brands sections  
 
     useEffect(() => {
-        const brandCard = LoadedBrands.filter(brand => brand.brandName == brandName)
+        const brandCard = LoadedBrands?.filter(brand => brand?.brandName == brandName)
         setFindBrands(brandCard)
     }, [LoadedBrands, brandName])
     console.log(findBrands)
@@ -66,7 +67,7 @@ const Brands = () => {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 justify-center bg-base-100 mt-8">
                 {
-                    findBrands.map(singleBrand => <SingleBrand key={singleBrand.id} singleBrand={singleBrand}></SingleBrand>)
+                    findBrands?.map(singleBrand => <SingleBrand key={singleBrand?.id} singleBrand={singleBrand}></SingleBrand>)
                 }
             </div>
         </div>

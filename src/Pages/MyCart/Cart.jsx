@@ -16,7 +16,7 @@ const Cart = ({ product, userData, setUserData }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://technology-and-electronics-server-k60o80dib-rejas-projects.vercel.app/product/${_id}`, {
+                fetch(`https://technology-and-electronics-server-ruddy.vercel.app/cart/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
